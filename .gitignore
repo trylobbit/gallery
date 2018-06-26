@@ -1,6 +1,4 @@
 
-currencyapi/target/*
-mvc/target/*
 !.mvn/wrapper/maven-wrapper.jar
 
 *.idea
@@ -9,3 +7,7 @@ mvc/target/*
 *.ipr
 *.class
 *.log
+
+currencyapi/target/*
+mvc/target/*
+target/*
