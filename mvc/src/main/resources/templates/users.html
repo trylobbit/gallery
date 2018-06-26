@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}">
+
+<body>
+<section layout:fragment="content">
+
+    <div id="result">
+        <div>
+            <table id="baseTable">
+                <thead class="tableHeader">
+                <tr>
+                    <td class="baseTd">Login</td>
+                    <td class="baseTd">Mail</td>
+                    <td class="baseTd">Password</td>
+                    <td class="baseTd">Date</td>
+                    <td class="baseTd">Roles</td>
+                    <td></td>
+                </tr>
+                </thead>
+                <th:block th:each="user : ${allUsers}">
+                    <tr>
+                        <td class="baseTd" th:text="${user.name}">...</td>
+                        <td class="baseTd" th:text="${user.mail}">...</td>
+                        <td class="baseTd" th:text="${user.password}">...</td>
+                        <td class="baseTd" th:text="${user.date}">...</td>
+                        <th:block th:each="role : ${user.roles}">
+                            <td class="baseTd" th:text="${role.roleType}">...</td>
+                        </th:block>
+                        <td>
+                            <form th:action="@{/users}" method="post">
+                                <button class="deleteButton">delete
+                                    <input type="hidden" th:name="id" th:value="*{user.id}">
+                                    </input>
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                </th:block>
+            </table>
+            </span></div>
+        <div>
+            <ul class="pagination">
+
+
+                <th:block th:with="leftIsDisabled=${actualPage} == 0">
+                    <li>
+                        <a th:if="${leftIsDisabled}"></a>
+                        <a th:unless="${leftIsDisabled}" th:href="|?page=${actualPage-1}|">
+                            <</a>
+                    </li>
+
+                    <li th:each="number : ${#numbers.sequence(0, pages-1)}">
+                        <th:block th:with="isDisabled=${actualPage} != ${number}">
+                            <a th:if="${isDisabled}" th:href="|?page=${number}|" th:name="number"
+                               th:text="${number+1}"></a>
+                            <a th:unless="${isDisabled}" th:name="number" th:text="${number+1}"></a>
+                        </th:block>
+
+                    </li>
+                    <th:block th:with="rightIsDisabled=${actualPage} == ${pages-1}">
+                        <li>
+                            <a th:if="${rightIsDisabled}"></a>
+                            <a th:unless="${rightIsDisabled}" th:href="|?page=${actualPage+1}|">
+                                ></a>
+                        </li>
+                    </th:block>
+                </th:block>
+
+            </ul>
+        </div>
+    </div>
+
+</section>
+
+</body>
+</html>

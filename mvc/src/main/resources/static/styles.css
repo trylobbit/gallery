@@ -1,0 +1,227 @@
+/*----------------------------    General   --------------------------------------*/
+body {
+    background-color: #69767b;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
+}
+
+/*------------------------------   Footer    -------------------------------------*/
+#footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.76);
+    color: white;
+    text-align: center;
+}
+
+/*------------------------------   Header    -------------------------------------*/
+#header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+}
+
+#containerNaviButtons {
+
+    list-style-type: none;
+    margin: 0;
+    height: 45px;
+    overflow: hidden;
+    background-color: #505050;
+}
+
+#containerNaviButtons:after {
+    content: ' ';
+    clear: both;
+}
+
+/*------------------------------  Navigation  ------------------------------------*/
+.naviButton {
+    float: left;
+    width: 20%;
+    height: 45px;
+    background-color: #505050;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.naviLink {
+    color: #b9b9b9;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: 'Comfortaa', cursive;
+}
+
+a:hover {
+    color: white;
+}
+
+.naviButton:hover {
+    background-color: #69767b;
+}
+
+#containerLogButtons {
+    float: right;
+    width: 15%;
+    list-style-type: none;
+    margin: 0;
+    height: 45px;
+    overflow: hidden;
+    background-color: #505050;
+}
+
+.logButton {
+    float: left;
+    width: 50%;
+    height: 45px;
+    background-color: #505050;
+    font-size: 15px;
+    text-align: center;
+}
+
+.logLink {
+    font-size: 15px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+}
+
+.non-active {
+    list-style: none;
+}
+
+/*---------------------------------   Content   -----------------------------------*/
+#result {
+    background-color: black;
+    width: 100%;
+    /*800px*/
+    height: 800px;
+    margin: auto;
+    position: relative;
+    top: 100px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+}
+
+table {
+    margin: auto;
+    background-color: white;
+}
+
+#helloMessage {
+    font-family: 'Comfortaa', cursive;
+    font-family: 'Poiret One', cursive;
+    font-size: 90px;
+    margin: auto;
+    color: #69767b;
+}
+
+#errorMessage {
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+    margin: auto;
+    color: white;
+    padding-left: 20%;
+    padding-top: 80px;
+}
+
+.tableHeader {
+    font-weight: 900;
+    color: #69767b;
+    font-size: 20px;
+    background-color: #f5f5f5;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+#baseTable {
+    border-collapse: collapse;
+    width: 80%;
+}
+
+th{
+    padding: 8px;
+    text-align: left;
+}
+#baseTable tr{
+    height: 55px;
+}
+/*---------------------------------  Forms   -----------------------------------*/
+.errorMessage {
+    font-size: 20px;
+    color: #d70f17;
+}
+
+.error {
+    font-size: 12px;
+    margin-left: 40px;
+}
+
+#addForm {
+    width: 100%;
+    margin: auto;
+    background-color: #b9b9b9;
+}
+
+#logForm {
+    background-color: #b9b9b9;
+}
+
+.formTitle {
+    color: #69767b;
+    font-weight: bold;
+    font-size: 26px;
+    padding-bottom: 30px;
+}
+
+#buttonsLine {
+    float: right;
+}
+
+.deleteButton {
+    background-color: #bdcbcb;
+    border: none;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*-------------------------------------------- Paging ---------------------------------------------------------------*/
+.pagination {
+    list-style-type: none;
+    width:30%;
+    height: 35px;
+    background-color: #505050;
+    margin:auto;
+    text-align: center;
+}
+
+.pagination li {
+    display: inline;
+    padding-top: 10px;
+    font-family: 'Comfortaa', cursive;
+}
+.pagination a{
+    text-decoration: none;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.pagination li a:active {
+    color: #39404d;
+}
+
+.pagination li a:visited {
+    color: rgba(140, 153, 153, 0.45);
+    text-decoration: none;
+}

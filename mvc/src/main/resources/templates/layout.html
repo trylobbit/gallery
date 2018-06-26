@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<!--xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">-->
+
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+>
+<head>
+    <link rel="stylesheet" th:href="@{/styles.css}" href="../../styles.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa|Poiret+One" rel="stylesheet">
+    <!--<script src="../../js/lib/jquery-3.3.1.min.js"></script>-->
+    <!--<script src="../../js/src/main.js"></script>-->
+    <title>Trylobbit®</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+</head>
+
+<body>
+<div id="header">
+
+    <ul id="containerNaviButtons">
+        <li class="naviButton" id="home">
+            <a class="naviLink" type="text/css" th:href="@{/home}">Home</a>
+        </li>
+        <li class="naviButton" id="base">
+            <a class="naviLink" type="text/css" th:href="@{/base}">Products Base</a>
+        </li>
+
+        <li class="naviButton top-menu">
+
+            <!--<ul class="sub-menu non-active">-->
+            <!--<li><a href="#">Add</a></li>-->
+            <!--<li><a href="#">Delete</a></li>-->
+            <!--<li><a href="#">Change</a></li>-->
+            <!--</ul>-->
+
+            <a class="naviLink" type="text/css" th:href="@{/edit}">Edit</a>
+        </li>
+        <!--<li class="naviButton" id="users">-->
+        <!--<a class="naviLink" type="text/css" th:href="@{/users}" sec:authorize="hasRole('ADMIN')">-->
+        <!--Users</a>-->
+        <!--</li>-->
+        <ul id="containerLogButtons">
+            <li class="logButton">
+                <a class="logLink" type="text/css" th:href="@{/register}"> Register now</a>
+            </li>
+            <!--<a class="logLink" type="text/css" th:href="@{/logout}" />Logout</a>-->
+
+            <li class="logButton" id="login">
+                <a class="logLink" type="text/css" th:href="@{/login}">Log in</a>
+            </li>
+        </ul>
+    </ul>
+</div>
+
+<div layout:fragment="content"></div>
+
+<div id="footer">
+    <div class="container">
+        <footer>
+            <adress><p> Trylobbit Co® 2018</p></adress>
+        </footer>
+    </div>
+</div>
+
+</body>
+
+</html>>

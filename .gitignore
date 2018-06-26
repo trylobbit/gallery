@@ -1,0 +1,11 @@
+
+currencyapi/target/*
+mvc/target/*
+!.mvn/wrapper/maven-wrapper.jar
+
+*.idea
+*.iws
+*.iml
+*.ipr
+*.class
+*.log

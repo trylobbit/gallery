@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      xmlns="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}">
+
+
+<body>
+
+<section layout:fragment="content">
+    <div id="result">
+        <div id="addForm">
+            <form action="#" th:action="@{/edit}" th:object="${product}" method="post">
+                <table>
+                    <thead>
+                    <tr>
+                        <td class="formTitle">Add new product:</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>title</td>
+                        <td><input type="text" th:field="*{name}"/></td>
+                    </tr>
+                    <tr>
+                        <td>technique</td>
+                        <td><select th:field="*{type}">
+                            <option th:each="type : ${T(com.satyla.model.ProductType).values()}"
+                                    th:value="${type}"
+                                    th:text="${type.name}">
+                            </option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>amount</td>
+                        <td><input type="text" th:field="*{amount}"/></td>
+                    </tr>
+                    <tr>
+                        <td>available</td>
+                        <td><select th:field="*{available}">
+                            <option th:each="available : ${T(com.satyla.model.Available).values()}"
+                                    th:value="${available}"
+                                    th:text="${available.name}">
+                            </option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td>price</td>
+                        <td><input type="number" th:field="*{price}"/></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td id="buttonsLine"><p><input type="submit" value="Submit"/> <input type="reset"
+                                                                                             value="Reset"/></p></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </form>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
